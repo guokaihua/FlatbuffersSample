@@ -14,7 +14,7 @@
 
    ```Java
    A {
-       int aa;
+       int aa;
        String bb;
        List<ItemObj> ccList;
    }
@@ -25,7 +25,7 @@
        String bStr;
    }
    
-   //添加数组
+   //添加数组
    int[] dictOffsets = new int[num];
    for (int n = 0; n < num; n++) {
        int shuzi = 100;
