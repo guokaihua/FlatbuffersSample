@@ -18,10 +18,10 @@
        String bb,
        List<ItemObj> ccList
    }
-
-   ItemObj {
+   
+   ItemObj {
        int shuzi = 100;
-       String aStr;
+       String aStr;
        String bStr;
    }
    
@@ -35,7 +35,7 @@
    }
    int listOffset = A.createListVector(fbb,dictOffsets);
    
-   A.startStockDictList(fbb);
+   A.startStockDictList(fbb);
    A.addAa(fbb, aa);
    int bbOffset = fbb.createString(bb);
    A.addBb(fbb, bbOffset);
