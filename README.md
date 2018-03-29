@@ -11,7 +11,8 @@ flatbuffers的简单使用
 
 5. 示例: 详情请查阅代码
 
-   ```A {
+   ```Java
+   A {
     
         int aa,
        
@@ -68,3 +69,4 @@ flatbuffers的简单使用
     fbb.finish(endOffset);
   
     Bytebuf bytebuf = fbb.dataBuffer();
+    ```
