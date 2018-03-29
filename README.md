@@ -11,26 +11,25 @@ flatbuffers的简单使用
 
 5. 示例: 详情请查阅代码
 
-       A {
+   A {
     
-            int aa,
+        int aa,
        
-            String bb,
+        String bb,
        
-            List<ItemObj> ccList
+         List<ItemObj> ccList
        
-      }
+    }
 
-       ItemObj {
-   
-              int shuzi = 100;
+    ItemObj {
+    
+          int shuzi = 100;
       
-              String aStr;
+          String aStr;
       
-              String bStr;
+        String bStr;
       
-       }
-  ------------------------------------------------------------------------------------
+   }
   
   //添加数组
   
