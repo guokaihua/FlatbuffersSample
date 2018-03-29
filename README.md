@@ -19,9 +19,9 @@ flatbuffers的简单使用
        
        List<ItemObj> ccList
        
-     }
+      }
 
-      ItemObj{
+        ItemObj{
    
         int shuzi = 100;
       
@@ -29,7 +29,7 @@ flatbuffers的简单使用
       
        String bStr;
       
-      }
+        }
   ------------------------------------------------------------------------------------
   
   //添加数组
@@ -61,10 +61,9 @@ flatbuffers的简单使用
   
     int endOffset = StockDictList.endStockDictList(fbb);
   
-    or
-  
-     int endOffset = A.createListVector(fbb,aa,bbOffset,listOffset);
-  
+     or
+
+    int endOffset = A.createListVector(fbb,aa,bbOffset,listOffset);
   
     fbb.finish(endOffset);
   
