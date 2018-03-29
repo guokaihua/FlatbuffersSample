@@ -37,7 +37,7 @@
    
    A.startStockDictList(fbb);
    A.addAa(fbb, aa);
-   int bbOffset = fbb.createString(bb);
+   int bbOffset = fbb.createString(bb);
    A.addBb(fbb, bbOffset);
    A.addCcList(fbb,listOffset);
    int endOffset = StockDictList.endStockDictList(fbb);
