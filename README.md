@@ -4,7 +4,7 @@
 
 ##### 1.集成FlatBuffer的java源码https://github.com/google/flatbuffers /trunk/java目录
 
-##### 2.https://github.com/google/flatbuffers/releases下载flatc.exe
+##### 2.[下载flatc.exe](https://github.com/google/flatbuffers/releases)
 
 ##### 3.编写fbs文件
 
@@ -14,17 +14,17 @@
 
    ```Java
    A {
-        int aa
-        String bb,
-         List<ItemObj> ccList
-    }
-
-    ItemObj {
-          int shuzi = 100;
-          String aStr;
-        String bStr;
+       int aa
+       String bb,
+       List<ItemObj> ccList
    }
-  //添加数组
+
+   ItemObj {
+       int shuzi = 100;
+       String aStr;
+       String bStr;
+   }
+   //添加数组
    int[] dictOffsets = new int[num];
    for (int n = 0; n < num; n++) {
        int shuzi = 100;
@@ -33,7 +33,8 @@
        dictOffsets[n] = ItemObj.createItem(fbb,kOffset,nOffset,shuzi);
    }
    int listOffset = A.createListVector(fbb,dictOffsets);
-   A.startStockDictList(fbb);
+   
+   A.startStockDictList(fbb);
    A.addAa(fbb, aa);
    int bbOffset = fbb.createString(bb);
    A.addBb(fbb, bbOffset);
@@ -41,5 +42,7 @@
    int endOffset = StockDictList.endStockDictList(fbb);
    //或者
    int endOffset = A.createListVector(fbb,aa,bbOffset,listOffset);
+   
    fbb.finish(endOffset);
+   
    Bytebuf bytebuf = fbb.dataBuffer();
