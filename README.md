@@ -9,7 +9,8 @@
 ##### 3.编写fbs文件
    ```Java
    //fbs结构定义 xxx.fbs
-   namespace 包路径;
+   
+   namespace 包路径;
    table A {
        aa : int;
        bb : string;
