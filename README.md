@@ -2,7 +2,7 @@
 
 #### flatbuffers的简单使用
 
-##### 1.集成FlatBuffer的java源码https://github.com/google/flatbuffers /trunk/java目录
+##### 1.[集成FlatBuffer源码](https://github.com/google/flatbuffers) /trunk/java目录
 
 ##### 2.[下载flatc.exe](https://github.com/google/flatbuffers/releases)
 
@@ -14,9 +14,9 @@
 
    ```Java
    A {
-       int aa
+       int aa
        String bb,
-       List<ItemObj> ccList
+       List<ItemObj> ccList
    }
 
    ItemObj {
@@ -24,13 +24,14 @@
        String aStr;
        String bStr;
    }
+   
    //添加数组
    int[] dictOffsets = new int[num];
    for (int n = 0; n < num; n++) {
-       int shuzi = 100;
-       int kOffset = fbb.createString(aStr);
-       int nOffset = fbb.createString(bStr);
-       dictOffsets[n] = ItemObj.createItem(fbb,kOffset,nOffset,shuzi);
+       int shuzi = 100;
+       int kOffset = fbb.createString(aStr);
+       int nOffset = fbb.createString(bStr);
+       dictOffsets[n] = ItemObj.createItem(fbb,kOffset,nOffset,shuzi);
    }
    int listOffset = A.createListVector(fbb,dictOffsets);
    
