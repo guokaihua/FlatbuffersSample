@@ -14,14 +14,14 @@
 
    ```Java
    A {
-       int aa
-       String bb,
-       List<ItemObj> ccList
+       int aa;
+       String bb;
+       List<ItemObj> ccList;
    }
    
    ItemObj {
        int shuzi = 100;
-       String aStr;
+       String aStr;
        String bStr;
    }
    
@@ -41,8 +41,8 @@
    A.addBb(fbb, bbOffset);
    A.addCcList(fbb,listOffset);
    int endOffset = StockDictList.endStockDictList(fbb);
-   //或者
-   int endOffset = A.createListVector(fbb,aa,bbOffset,listOffset);
+   //或者
+   int endOffset = A.createListVector(fbb,aa,bbOffset,listOffset);
    
    fbb.finish(endOffset);
    
