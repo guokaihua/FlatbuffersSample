@@ -11,7 +11,7 @@ flatbuffers的简单使用
 
 5. 示例: 详情请查阅代码
 
-      A {
+       A {
     
         int aa,
        
@@ -46,7 +46,7 @@ flatbuffers的简单使用
      
      dictOffsets[n] = ItemObj.createItem(fbb,kOffset,nOffset,shuzi);
      
-    }
+     }
     int listOffset = A.createListVector(fbb,dictOffsets);
   
     A.startStockDictList(fbb);
