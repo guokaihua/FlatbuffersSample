@@ -13,23 +13,23 @@ flatbuffers的简单使用
 
        A {
     
-        int aa,
+            int aa,
        
-       String bb,
+            String bb,
        
-       List<ItemObj> ccList
+            List<ItemObj> ccList
        
       }
 
-        ItemObj{
-   
-        int shuzi = 100;
+       ItemObj {
+   
+              int shuzi = 100;
       
-        String aStr;
+              String aStr;
       
-       String bStr;
+              String bStr;
       
-        }
+       }
   ------------------------------------------------------------------------------------
   
   //添加数组
@@ -38,15 +38,16 @@ flatbuffers的简单使用
   
     for (int n = 0; n < num; n++) {
   
-     int shuzi = 100;
+       int shuzi = 100;
      
-     int kOffset = fbb.createString(aStr);
+       int kOffset = fbb.createString(aStr);
      
-     int nOffset = fbb.createString(bStr);
+       int nOffset = fbb.createString(bStr);
      
-     dictOffsets[n] = ItemObj.createItem(fbb,kOffset,nOffset,shuzi);
+       dictOffsets[n] = ItemObj.createItem(fbb,kOffset,nOffset,shuzi);
      
      }
+     
     int listOffset = A.createListVector(fbb,dictOffsets);
   
     A.startStockDictList(fbb);
