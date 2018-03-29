@@ -13,18 +13,23 @@
 ##### 5.示例: 详情请查阅代码
 
    ```Java
-   A {
-       int aa;
-       String bb;
-       List<ItemObj> ccList;
+   
+   //fbs结构定义 xxx.fbs
+   namespace 包路径;
+   table A {
+       aa : int;
+       bb : string;
+       ccList : [ItemObj];
    }
    
-   ItemObj {
-       int shuzi = 100;
-       String aStr;
-       String bStr;
+   table ItemObj {
+       shuzi : int;
+       aStr : string;
+       bStr : string;
    }
-   
+   root_type A;
+   //通过命令 flatc --java -o xxx.fbs生成 A.java ItemObj.java
+   
    //添加数组
    int[] dictOffsets = new int[num];
    for (int n = 0; n < num; n++) {
