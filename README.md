@@ -11,7 +11,7 @@ flatbuffers的简单使用
 
 5. 示例: 详情请查阅代码
 
-   A {
+   ```A {
     
         int aa,
        
