@@ -9,34 +9,34 @@ flatbuffers的简单使用
 
 4.flatc.exe --java xx.fbs生成java文件
 
-5. 示例:
+5. 示例: 详情请查阅代码
 
-    A {
+      A {
     
-       int aa,
+        int aa,
        
        String bb,
        
        List<ItemObj> ccList
        
-    }
+     }
 
-   ItemObj{
+      ItemObj{
    
-      int shuzi = 100;
+        int shuzi = 100;
       
-      String aStr;
+        String aStr;
       
-      String bStr;
+       String bStr;
       
-   }
+      }
   ------------------------------------------------------------------------------------
   
   //添加数组
   
-  int[] dictOffsets = new int[num];
+    int[] dictOffsets = new int[num];
   
-  for (int n = 0; n < num; n++) {
+    for (int n = 0; n < num; n++) {
   
      int shuzi = 100;
      
@@ -46,26 +46,26 @@ flatbuffers的简单使用
      
      dictOffsets[n] = ItemObj.createItem(fbb,kOffset,nOffset,shuzi);
      
-  }
-  int listOffset = A.createListVector(fbb,dictOffsets);
+    }
+    int listOffset = A.createListVector(fbb,dictOffsets);
   
-  A.startStockDictList(fbb);
+    A.startStockDictList(fbb);
   
-  A.addAa(fbb, aa);
+    A.addAa(fbb, aa);
   
-  int bbOffset = fbb.createString(bb);
+    int bbOffset = fbb.createString(bb);
   
-  A.addBb(fbb, bbOffset);
+    A.addBb(fbb, bbOffset);
   
-  A.addCcList(fbb,listOffset);
+    A.addCcList(fbb,listOffset);
   
-  int endOffset = StockDictList.endStockDictList(fbb);
+    int endOffset = StockDictList.endStockDictList(fbb);
   
-  or
+    or
   
-   int endOffset = A.createListVector(fbb,aa,bbOffset,listOffset);
+     int endOffset = A.createListVector(fbb,aa,bbOffset,listOffset);
   
   
-  fbb.finish(endOffset);
+    fbb.finish(endOffset);
   
-  Bytebuf bytebuf = fbb.dataBuffer();
+    Bytebuf bytebuf = fbb.dataBuffer();
