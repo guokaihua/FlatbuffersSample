@@ -7,14 +7,8 @@
 ##### 2.[下载flatc.exe](https://github.com/google/flatbuffers/releases)
 
 ##### 3.编写fbs文件
-
-##### 4.flatc.exe --java xx.fbs生成java文件
-
-##### 5.示例: 详情请查阅代码
-
    ```Java
-   
-   //fbs结构定义 xxx.fbs
+   //fbs结构定义 xxx.fbs
    namespace 包路径;
    table A {
        aa : int;
@@ -28,8 +22,14 @@
        bStr : string;
    }
    root_type A;
-   //通过命令 flatc --java -o xxx.fbs生成 A.java ItemObj.java
-   
+   
+   ```
+##### 4.flatc.exe --java xx.fbs生成java文件
+
+##### 5.示例: 详情请查阅代码
+
+   ```Java
+   
    //添加数组
    int[] dictOffsets = new int[num];
    for (int n = 0; n < num; n++) {
