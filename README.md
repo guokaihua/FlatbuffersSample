@@ -1,15 +1,16 @@
 # FlatbuffersSample
-##flatbuffers的简单使用
 
-###1.集成FlatBuffer的java源码https://github.com/google/flatbuffers /trunk/java目录
+## flatbuffers的简单使用
 
-###2.https://github.com/google/flatbuffers/releases下载flatc.exe
+### 1.集成FlatBuffer的java源码https://github.com/google/flatbuffers /trunk/java目录
 
-###3.编写fbs文件
+### 2.https://github.com/google/flatbuffers/releases下载flatc.exe
 
-###4.flatc.exe --java xx.fbs生成java文件
+### 3.编写fbs文件
 
-###5.示例: 详情请查阅代码
+### 4.flatc.exe --java xx.fbs生成java文件
+
+### 5.示例: 详情请查阅代码
 
    ```Java
    A {
@@ -61,4 +62,5 @@
     fbb.finish(endOffset);
   
     Bytebuf bytebuf = fbb.dataBuffer();
+    
     ```
